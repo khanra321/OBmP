@@ -1,0 +1,65 @@
+<!doctype html>
+<head>
+    <meta charset = "UTF-8">
+    <title>Staff Login Page</title>
+    <link rel="stylesheet" type="text/css" href="/static/CSS/SLstyle.css">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/style.css">
+</head>
+<body>
+        <nav>
+            <img src="/static/image/book.png" class="logo" height=100px width=100px>
+           
+            <ul>
+                <li class ="always"><a href="{% url 'home' %}"> Home </a></li>
+                <li class ="always"><a href="{% url 'about' %}"> About </a></li>
+                <li class ="always"><a href="{% url 'NewAcc' %}"> New Account </a></li>
+            </ul>
+        </nav>
+    <div class="box">
+        <form action="{% url 'Staff' %}" method="POST">
+            {% csrf_token %}
+        <h2>Staff Log in</h2>
+            <div class="inputbox">
+                <input type="text" name="username"  required>
+                 <span>username</span>
+                <i></i>
+            </div>
+            <div class="inputbox">
+                <input type="Password" name="password" required>
+                <span>Password</span>
+                <i></i>
+            </div>
+            <button type="submit" class="login-btn" >Login</button>
+                {% if messages %}
+                    {% for message in messages %}
+                         <p style="color:red;margin-left:30px;margin-top:30px">{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+        </form>
+    </div>
+</body>
+<style>
+.box form h2
+ {
+    color: rgb(41, 223, 255);
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+.login-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(18, 191, 3);
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 40px;
+  margin-left: 5px;
+
+}
+.login-btn:hover {
+  background-color: rgb(58, 255, 8);
+}
+</style>

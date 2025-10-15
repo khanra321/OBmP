@@ -1,0 +1,150 @@
+*
+{
+   margin: 0;
+   padding:0;
+   box-sizing: border-box;
+   font-family: sans-serif; 
+}
+body
+{
+    background-color: #7af0ff;
+}
+
+/* nav
+{   background-color:#2f3135;
+    display: flex;
+    width: 100%;
+    margin: auto;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 25px #2f3135, 0 0 45px #2f3135 ;
+
+}
+
+nav ul li
+{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a
+{ 
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover
+{
+    background: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color:black;
+    margin: 30px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 15px white, 0 0 35px white;
+} */
+
+
+/* .always
+{   color: #000;
+    text-decoration: underline;
+    text-decoration-color: white;
+} */
+
+.always
+{
+    background-color: rgb(255, 106, 0);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(0, 0, 0), 0 0 25px orange;
+    padding: 8px 12px;
+}
+.container
+{
+    background: rgb(33, 26, 26);
+    max-width: 650px;
+    padding: 28px;
+    margin-top: 5%;
+    margin-left: 30%;
+    box-shadow: 0 15px 20px black;
+    border-radius:15px;
+}
+h2{
+    font-size: 26px;
+    font-weight: 600;
+    text-align: left;
+    color: orange;
+    padding-bottom: 8px;
+    border-bottom: 1px solid silver;
+}
+.content{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+padding: 20px 0;
+}
+.inputbox
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+}
+.inputbox:nth-child(2n)
+{
+    justify-content: end;
+}
+.inputbox label, .gendert
+{
+    width: 95%;
+    color:orange;
+    font-weight: bold;
+    margin: 5px 0;
+}
+.gendert
+{
+    font-size: 16px;
+}
+.inputbox input{
+    height: 40px;
+    width: 95%;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.inputbox input:is(:focus,:valid)
+{
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+.genderc 
+{
+    color:yellow;
+    padding: 0 20px 0 5px;
+    font-size: 14px;
+}
+.genderc label, .genderc input{
+    cursor:pointer;
+}
+.buttoncontainer button{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    display: block;
+    font-size:25px;
+    color: rgb(253, 253, 253);
+    border:none;
+    border-radius: 5px;
+    background-color: #05fd2b;
+
+}
+.buttoncontainer button:hover
+{
+    box-shadow: 0 0 5px orange, 0 0 25px orange;
+
+}

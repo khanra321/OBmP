@@ -1,0 +1,32 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8";>
+    <meta http-equiv="X-UA-Compatible" content ="IE=edge">
+    <meta name="viewport" content=" width=device-width, initial-scale=1,0">
+    <title>Homepage</title>
+    <link rel="stylesheet" type="text/css" href="/static/CSS/SLstyle.css">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/style.css">
+</head> 
+<body>
+    <div class="hero">
+        <nav>
+            <img src="/static/image/book.png" class="logo" height=100px width=100px>
+           
+            <ul>
+                <li class="home"><a href="#"> Home </a></li>
+                <li class ="always"><a href="{% url 'about' %}"> About </a></li>
+                <li class ="always"><a href="{% url 'NewAcc' %}"> New Account </a></li>
+                <li class ="always"><a href="{% url 'Staff' %}"> staff </a></li>
+            </ul>
+        </nav>
+        <div class="detel">
+            <h1>WELCOME TO <span>Faithful</span> Bank</h1>
+            <h3>USER</h3>
+            <a href="{% url 'UserLog' %}"> Login </a>
+
+        </div>
+        <div class= "image">
+            <img src = "/static/image/croppe.png"height=400px width=400px>
+        </div>
+    </div>
+</body>

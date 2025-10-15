@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Page</title>
+    <link rel="stylesheet" href="/static/CSS/Project.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/CSS/style.css">
+</head>
+<body>
+    <nav>
+        <img src="/static/image/book.png" class="logo" height="100px" width="100px">
+        <div class="profile">
+            <img src="{{ photo_url }}" alt="Profile Photo">
+            <span class="username">{{ username }}</span>
+        </div>
+        <ul>
+            <li><a href="{% url 'DebitCredit' %}">Profile</a></li>
+            <li><a href="{% url 'History' %}">History</a></li>
+            <li><a href="{% url 'Transaction' %}">Transfer Money</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Send Money</h2>
+        {% if messages %}
+            {% for message in messages %}
+                <p style="color: {% if message.tags == 'error' %}red{% else %}green{% endif %}">{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+        <form method="POST" action="{% url 'Transaction' %}">
+            {% csrf_token %}
+            <label for="recipient">Select Recipient:</label>
+            <select name="recipient" id="recipient" required>
+                {% for u in users %}
+                    <option value="{{ u.id }}">{{ u.username }}</option>
+                {% endfor %}
+            </select><br><br>
+            <label for="amount">Amount ($):</label>
+            <input type="number" name="amount" id="amount" placeholder="Enter Amount" min="1" required><br><br>
+            <button type="submit">Send Money</button>
+        </form>
+    </div>
+</body>
+</html>
+
+<style>
+    #AfNav{
+    background-image:url(/static/image/Faithful.jpg);
+    background-size:cover;
+    align-items: center;
+    height:700px;
+}
+#main span{
+    color:aliceblue;
+}
+
+
+.profile span{
+    color:aliceblue;
+    font-size: 40px;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+.profile img {
+  width: 100px;
+  height:110px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.card-body{
+
+
+}
+
+</style>
+

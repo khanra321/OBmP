@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BankingManagement</title>
+    <link rel="stylesheet" href="/static/CSS/Project.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/CSS/style.css">
+
+</head>
+<body>
+    <div class="hero">
+        <nav>
+
+            <img src="/static/image/book.png" class="logo" height=100px width=100px>
+            <div class="profile">
+                <img src="{{ photo_url }}" alt="Profile Photo" >
+                <span class="username">{{ username}}</span>
+            </div>
+           
+            <ul>
+                <li class ="always"><a href="{% url 'home' %}"> Home </a></li>
+                <li class ="always"><a href="{% url 'about' %}"> About </a></li>
+                <li class ="always"><a href="{% url 'NewAcc' %}"> New Account </a></li>
+                <li class ="always"><a href="{% url 'UserLog' %}"> New Login </a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="AfNav">
+        <div id="main">
+            <div id="first_row" class="row">
+                <a href="{% url 'History' %}">
+                <div class="card" id="Deposit-card" >
+                    <h5 style="color:white;" class="card-title">View Histry</h5>
+                    <h6>Trenjaction</h6>
+                </div>
+                </a>
+                <a href="{% url 'Transaction' %}">
+                <div class="card" id="Widthdraw-card" >
+                    <h5  class="card-title">Send Money</h5>
+                    <h6 style="color:white;" >Debit</h6>
+                </div>
+                </a>
+                <div class="card" id="Blance-card" >
+                    <div class="card-body">
+                        <h5 class="card-title">Balance</h5>
+                        <h6 class="card-subtitle">$<span id="balance">{{ balance }}</span></h6>
+                    </div>
+                </div>
+            </div>
+            <div id="second_row" class="row" >
+                    <form method="POST" action="{% url 'deposit' %}" class="card" id="deposit-amount" >
+                        {% csrf_token %}
+                        <h5 class="card-title">Doposit Amount $ <span id="deposit-number">00</span></h5>
+                        <input type="number" name="amount" id="input-deposit" type="number" placeholder="Enter Your Amount" min="1" required><br>
+                        <button type="submit" id="deposit-btn">Deposit </button>
+                    </form>
+
+                    <form method="POST" action="{% url 'withdraw' %}" class="card" id="widthdraw-amount" >
+                        {% csrf_token %}
+                        <h5 class="card-title">withdraw Amount $ <span id="with-amount">00</span></h5>
+                        <input  name="amount" id="with-input" type="number" placeholder="Enter Your Amount" min="1" required><br>
+                        <button type="submit" id="withdraw-btn">withdraw</button>
+                    </form>
+                    {% if messages %}
+                        {% for message in messages %}
+                            <p style="color:{% if message.tags == 'error' %}red{% else %}green{% endif %}">
+                                {{ message }}
+                            </p>
+                        {% endfor %}
+                    {% endif %}
+
+            </div>
+        </div>
+    </div>
+    <script src="/static/CSS/Project.js"></script>
+</body>
+</html>
+<style>
+#AfNav{
+    background-image:url(/static/image/Faithful.jpg);
+    background-size:cover;
+    align-items: center;
+    height:700px;
+}
+#main span{
+    color:aliceblue;
+}
+
+
+.profile span{
+    color:aliceblue;
+    font-size: 40px;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+.profile img {
+  width: 100px;
+  height:110px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+#AfNav a{
+    all: unset;
+}
+
+</style>
+

@@ -1,0 +1,89 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8";>
+    <meta http-equiv="X-UA-Compatible" content ="IE=edge">
+    <meta name="viewport" content=" width=device-width, initial-scale=1,0">
+    <title>Faithful Bank</title>
+    <link rel="stylesheet" type="text/css" href="/static/CSS/SLstyle.css">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/style.css">
+</head> 
+<body>
+    <div class="hero">
+        <nav>
+            <img src="/static/image/book.png" class="logo" height=100px width=100px>
+           
+            <ul>
+                <li class ="always"><a href="{% url 'home' %}"> Home </a></li>
+                <li class="home"><a href="#"> About </a></li>
+                <li class ="always"><a href="{% url 'NewAcc' %}"> New Account </a></li>
+                <li class ="always"><a href="{% url 'Staff' %}"> Staff </a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <h1>About Faithful Bank</h1>
+            <br>
+            <p>
+                An Faithful Bank is a secure and efficient platform that allows banks 
+                and customers to manage financial services digitally. This system provides convenient access 
+                to banking features anytime and anywhere.
+            </p>
+            <br>
+
+            <h3>Key Features:</h3><br>
+                <h3>1. User Authentication:</h3> Secure login for customers and staff using username, password, and OTP verification.
+                <br>
+                <h3>2. Account Management:</h3> Open, update, or close customer accounts with proper verification.
+                <br>
+                <h3>3. Fund Transfers:</h3> Transfer money h3etween accounts (NEFT, RTGS, IMPS) with transaction history tracking.<br>
+                <h3>4. Balance Enquiry:</h3> Customers can check real-time account h3alance and mini-statements.<br>
+                <h3>5. Loan & EMI Management:</h3> Apply for loans, view EMI schedules, and track repayments.<br>
+                <h3>6. Staff Management:</h3> Separate staff login for managing customers, approvals, and daily h3anking operations.<br>
+                <h3>7. Security:</h3> Strong encryption, data privacy policies, and fraud detection mechanisms.<br>
+                <h3>8. Notifications:</h3> SMS/email alerts for transactions, account updates, and loan reminders.<br>
+                <h3>9. Reports & Analytics:</h3> Generate customer reports, transaction summaries, and financial statements.<br>
+                <h3>10. Mobile Accessihbility:</h3> Fully responsive interface to access via mobile devices.<br>
+            <br>
+
+            <p>
+                This Faithful Bank ensures transparency, speed, and security for both 
+                customers and bank staff. It reduces paperwork, saves time, and provides 24/7 access to banking facilities.
+            </p>
+        </div>
+    </div>
+</body>
+
+<style>
+body
+{
+
+    height: auto;
+    background-color:#e0ecff;
+}
+p{
+    margin-left:5px;
+    margin-right:5px;
+}
+
+h1
+{
+    
+    margin-top:5px;
+    color:rgb(29, 0, 252);
+    margin-left:35%;
+}
+.container
+{
+    max-width: 1200px;
+    padding: 28px;
+    margin-top: 5%;
+    margin-left: 10%;
+    box-shadow: 0 15px 20px black;
+    height: auto;
+}
+h3{
+    color:rgb(30, 0, 255);
+    
+    font-family:sans-serif;
+}
+    </style>
+

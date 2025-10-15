@@ -1,0 +1,91 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History</title>
+    <link rel="stylesheet" href="/static/CSS/Project.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/CSS/style.css">
+</head>
+<body>
+    <nav>
+        <img src="/static/image/book.png" class="logo" height="100px" width="100px">
+        <div class="profile">
+            <img src="{{ photo_url }}" alt="Profile Photo">
+            <span class="username">{{ username }}</span>
+        </div>
+        <ul>
+            <li><a href="{% url 'DebitCredit' %}">Profile</a></li>
+            <li><a href="{% url 'History' %}">History</a></li>
+            <li><a href="{% url 'Transaction' %}">Transfer Money</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Transaction History</h2>
+        <table border="1" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Amount ($)</th>
+                    <th>Recipient</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for t in transactions %}
+                <tr>
+                    <td>{{ t.date|date:"Y-m-d H:i" }}</td>
+                    <td>{{ t.transaction_type }}</td>
+                    <td>{{ t.amount }}</td>
+                   <td>
+                        {% if t.recipient %}
+                            {{ t.recipient.username }}
+                        {% else %}
+                             -
+                        {% endif %}
+                    </td>
+
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="4">No transactions yet</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+<style>
+#AfNav{
+    background-image:url(/static/image/Faithful.jpg);
+    background-size:cover;
+    align-items: center;
+    height:700px;
+}
+#main span{
+    color:aliceblue;
+}
+
+.profile span{
+    color:aliceblue;
+    font-size: 40px;
+}
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+.profile img {
+    width: 100px;
+    height:110px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.card-body{
+}
+</style>

@@ -1,0 +1,189 @@
+*{
+    /* margin:0;
+    padding:0; */
+    
+    /* box-sizing: border-box; */
+}
+
+body{
+    /* background-image:url(Faithful.jpg); */
+    /* background-size:cover;
+    align-items: center;
+    height: auto; */
+    
+}
+#log_box{
+    align-items: center;
+    background-color:rgb(254, 255, 255);
+    height:400px;
+    width:400px;
+    padding: 50px;
+    margin-left:500px;
+    /* padding-top:10px; */
+    /* margin-top:150px; */
+    border-radius: 10px;
+    box-shadow: 0 20px 50px;
+
+}
+
+#name-error{
+    position: absolute;
+    bottom: px;
+    width: 200px;
+    font-size: 15px;
+    color: rgb(231, 57, 57);
+    margin-left: 170px;
+    margin-top: 12px;
+    
+}
+
+#password-error{
+    position: absolute;
+    bottom: px;
+    width: 200px;
+    font-size: 15px;
+    color: rgb(231, 57, 57);
+    margin-left: 170px;
+    margin-top: 12px;
+    
+}
+
+#log-error{
+    position: absolute;
+    bottom: px;
+    width: 200px;
+    font-size: 20px;
+    color: rgb(231, 57, 57);
+    margin-left: 100px;
+    margin-top: 12px;
+    text-decoration: underline;
+    
+
+}
+#main{
+      padding-top:1px; 
+}
+
+.card{
+    display: inline-block;
+}
+
+
+input{
+   
+    width: 100%;
+    padding: 4%;
+    margin-bottom: 30px;
+    border: 1PX solid #dddfe2;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button{
+    background-color: rgb(1, 255, 9);
+    width: 100%;
+    padding: 4%;
+    margin-bottom: 30px;
+    border: 1PX solid #dddfe2;
+    border-radius: 8px;
+    font-size: 16px;
+}
+#AfNav a {
+  display: inline-block;
+  padding: 10px 120px;
+  background-color: rgb(7, 7, 104);
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 40px;
+  margin-left: 5px;
+
+}
+#AfNav a:hover{
+    background-color: rgb(1, 1, 255);
+}
+
+#main{
+    
+    text-align: center;
+    /* margin-top: 67px; */
+    
+
+}
+body #AfNav #main #first_row {
+    margin-top: 67px;
+}
+   
+#Deposit-card{
+    background-color:rgb(5, 116, 252);
+    font-size:xx-large;
+    height:150px;
+    width:300px;
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 1px 8px;
+
+
+}
+
+#Widthdraw-card{
+    background-color:aqua;
+    font-size:xx-large;
+    height:150px;
+    width:300px;
+    padding: 50px;
+    margin-left:120px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 1px 8px;
+
+}
+
+#Blance-card{
+    background-color:rgb(240, 0, 216);
+    font-size:xx-large;
+    color: rgb(0, 0, 0);
+    height:150px;
+    width:300px;
+    padding: 50px;
+    margin-left:120px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 1px 8px;
+
+}
+
+#second_row{
+
+    display:inline-block;
+    margin-top: 150px;
+}
+
+#deposit-amount{
+    background-color:blueviolet;
+    font-size:xx-large;
+    height:300px;
+    width:300px;
+    padding: 50px;   
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 1px 8px;
+
+}
+
+#widthdraw-amount{
+
+    background-color:rgb(243, 13, 128);
+    font-size:xx-large;
+    height:300px;
+    width:300px;
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 1px 8px;
+    margin-left: 100px;
+    
+}

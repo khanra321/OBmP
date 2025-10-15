@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/CSS/Cust.css">
+    <link rel="stylesheet" href="/static/CSS/style.css">
+</head>
+<body>
+<div class="hero">
+    <nav>
+        <img src="/static/image/book.png" class="logo" height=100px width=100px>
+        <ul>
+            <li class ="always"><a href="{% url 'home' %}"> Home </a></li>
+            <li class ="always"><a href="{% url 'about' %}"> About </a></li>
+            <li class="home"><a href="#">New Account</a></li>
+            <li class ="always"><a href="{% url 'Staff' %}"> staff </a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <form class="school" method="POST" enctype="multipart/form-data" action="{% url 'AccountRecord' %}">
+            {% csrf_token %}
+            <h2>Customer Details</h2>
+            <div class="content">
+            <div class="inputbox">
+                    <label for="name">Full name</label>
+                    <input type="text" placeholder="enter full name"  name="name" required>
+                </div>
+                <div class="inputbox">
+                    <label for="id">Aadhar Number</label>
+                    <input type="tel" placeholder="enter aadhar number" pattern="[0-9]{12}" title="Write Proper Aadhar no" name="aadhar" required>
+                </div>
+                <div class="inputbox">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="enter email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Enter valid mail" name="email" required>
+                </div>
+                <div class="inputbox">
+                    <label id="lb" for="phone">Phone number</label>
+                    <input id = "phon" type="tel" placeholder="enter phone number" name="phone" pattern="[0-9]{10}" title="Write Proper Phone Number" onclick="Ass()" required>
+                </div>
+                <div class="inputbox">
+                    <label for="signupfor">Date of Birth</label>
+                    <input  type="date" placeholder="date-manth-year" name="dob" required>
+                </div>
+                <div class="inputbox">
+                    <label id="fas" for="password">Password</label>
+                    <input id="Pas" type="password" placeholder="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  onclick="Pass_pro()" required>
+                </div>
+                <span class="gendert">Gender</span>
+                <div class="genderc">
+                    <input type="radio" name="gender" value="M" id="male">
+                    <label for="gender">Male</label>
+                    <input type="radio" name="gender" value="F" id="female">
+                    <label for="gender">Female</label>
+                    <input type="radio" name="gender" value="O" id="other">
+                    <label for="gender">Other</label>
+                </div>
+
+            <div class="inputbox">
+                <label for="username">Username</label>
+                <input type="text" placeholder="choose a username" name="username" required>
+            </div>
+
+            <div class="inputbox">
+                <label for="photo">Profile Photo</label>
+                <input type="file" name="photo" accept="image/*" required>
+            </div>
+
+            
+            <div class="buttoncontainer">
+                <button class= "btn btn-primary" id="submit" type="submit" value="AccountRecord" >register</button>
+            </div>
+
+            {% if messages %}
+            {% for message in messages %}
+            <h2 style="color:green;">{{message}}</h2>
+            {% endfor %}
+            {% endif %}
+        </form>
+</div>
+<script src=""></script>
+</body>
+</html>
+
