@@ -1,18 +1,18 @@
 # OBmP
 A Django-based Banking Management System with user transactions, account management, and staff login.
 
-Features
+<h1>Features</h1>
 
-User registration and login
+1. User registration and login
 
-Staff login verification
+2. Staff login verification
 
-Deposit and Withdraw options
+3. Deposit and Withdrawal options
 
-Transaction history tracking
+4. Transaction history tracking
 
-Account balance view
+5. Account balance view
 
-Admin panel for management
+6. Admin panel for management
 
-Media upload support for profile photos
+7. Media upload support for profile photos
