@@ -35,7 +35,7 @@ A Django-based Banking Management System with user transactions, account managem
 
 <h4>1. **Clone this repository**</h4>
    ```bash
-   git clone https://github.com/your-username/OBmP.git
+   git clone https://github.com/khanra321/OBmP.git
    cd OBmP
    
 <h4>2. Install dependencies</h4>
