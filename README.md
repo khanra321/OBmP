@@ -16,3 +16,17 @@ A Django-based Banking Management System with user transactions, account managem
 6. Admin panel for management
 
 7. Media upload support for profile photos
+
+<h1>Technologies Used</h1>
+
+1. Python 3
+
+2. Django Framework
+
+3. MySQL Database
+
+4. HTML, CSS, JavaScript (Frontend)
+
+5. Bootstrap
+
+6. Media and Static File Handling
